@@ -1,8 +1,49 @@
 /* Style général */
+
+
+@font-face {
+    font-family: 'Fibel'; /* Nom de la police */
+    src: url('fonts/fibel.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes wave_2 {
+    0% {
+        transform: scale(1);
+        border-radius: 0%; /* Forme initiale (carrée ou rectangulaire) */
+    }
+    50% {
+        transform: scale(1.05); /* Légèrement agrandie */
+        border-radius: 20%; /* Image plus ronde (cercle) */
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 0%; /* Retour à la forme initiale */
+    }
+}
+
+
+
 body {
     background-color: #121212;
     color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    font-family: 'Fibel';
     margin: 0;
     padding: 0;
 }
@@ -17,7 +58,7 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #ff6f61;
     font-weight: bold;
 }
@@ -31,52 +72,71 @@ header {
 
 h1 {
     color: #f0f0f0;
-    font-size: 2rem;
+    font-size: 5rem;
     margin-bottom: 20px;
 }
 
-/* Styles pour les liens image images 100px de hauteur */ 
+/* Styles pour les liens images */
 .image-links {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex; /* Aligne les images horizontalement */
+    flex-direction: row; /* S'assure que la direction est bien horizontale */
+    gap: 20px; /* Ajoute un espace entre les images */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les images horizontalement dans le conteneur */
+    margin: 20px auto; /* Ajoute un espacement vertical et centre le conteneur */
+    max-width: 90%; /* Limite la largeur pour éviter un débordement */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
 }
 
 .image-link {
     position: relative;
-    width: 650px;
-    height: 550px;
-    background-size: cover;
-    background-position: center;
+    width: 550px; /* Ajustement de largeur pour une meilleure mise en page */
+    height: 500px; /* Ajustement de hauteur */
+    background-size: cover; /* Ajuste l'image pour remplir complètement l'espace */
+    background-position: center; /* Centre l'image dans le conteneur */
     border-radius: 8px;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Centre verticalement le texte */
+    justify-content: center; /* Centre horizontalement le texte */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     text-decoration: none;
+    flex-shrink: 0; /* Empêche les éléments de se rétrécir dans le flex */
+}
+
+/*
+.image-link:hover {
+    transform: scale(1.05); /* Effet de zoom 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+}
+*/
+.nav-link {
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .image-link:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    animation: wave_2 0.8s infinite;
+    color: #ff6f61; /* Couleur du texte pendant le survol */
 }
 
 .link-text {
     position: absolute;
-    color: #f0f0f0;
-    font-size: 1.4rem;
+    color: #ffffff;
+    font: "Fibel", sans-serif;
+    font-size: 4rem;
     font-weight: bold;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 100%;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.3); /* Légère transparence pour meilleure lisibilité */
+    background: rgba(0, 0, 0, 0.5); /* Légère transparence pour meilleure lisibilité */
     border-radius: 8px;
 }
 
 footer {
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
     padding: 20px;
     background-color: #1e1e1e;
@@ -84,6 +144,7 @@ footer {
 }
 
 footer a {
+    font-family: 'Courier New', Courier, monospace;
     color: #ff6f61;
     text-decoration: none;
 }
