@@ -8,6 +8,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Fibel_2'; /* Nom de la police */
+    src: url('fonts/fibel_2.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    font-weight: normal;
+    font-style: normal;
+}
+
 @keyframes wave {
     0% {
         transform: scale(1);
@@ -43,7 +50,7 @@
 body {
     background-color: #121212;
     color: #f0f0f0;
-    font-family: 'Fibel';
+    font-family: 'Fibel_2';
     margin: 0;
     padding: 0;
 }
@@ -72,8 +79,26 @@ header {
 
 h1 {
     color: #f0f0f0;
-    font-size: 5rem;
-    margin-bottom: 20px;
+    font-family: 'Fibel_2';
+    font-size: 2rem;
+    margin-bottom: 0.5rem; /* Réduit l'espace en dessous */
+    line-height: 0.1; /* Ajuste l'espacement entre les lignes */
+}
+
+h2 {
+    color: #f0f0f0;
+    font-family: 'Fibel';
+    font-size: 4rem;
+    margin-bottom: 0.5rem; /* Réduit l'espace en dessous */
+    line-height:0.5; /* Ajuste l'espacement entre les lignes */
+}
+
+h3 {
+    color: #f0f0f0;
+    font-family: 'Fibel_2';
+    font-size: 2rem;
+    margin-bottom: 0.5rem; /* Réduit l'espace en dessous */
+    line-height: 0.1; /* Ajuste l'espacement entre les lignes */
 }
 
 /* Styles pour les liens images */
@@ -124,7 +149,7 @@ h1 {
 .link-text {
     position: absolute;
     color: #ffffff;
-    font: "Fibel", sans-serif;
+    font-family: 'Fibel';
     font-size: 4rem;
     font-weight: bold;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
