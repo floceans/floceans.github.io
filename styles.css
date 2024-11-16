@@ -162,3 +162,51 @@ footer a {
     color: #ff6f61;
     text-decoration: none;
 }
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Ajoute un léger padding pour éviter que le contenu touche les bords */
+    }
+
+    header {
+        flex-direction: column; /* Empile le logo et le menu */
+        align-items: flex-start; /* Aligne les éléments sur la gauche */
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Réduit la taille du logo */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2rem; /* Réduit la taille des titres */
+        line-height: 1.2; /* Augmente légèrement l'espacement pour éviter les superpositions */
+    }
+
+    .image-links {
+        flex-direction: column; /* Passe les images en colonne */
+        gap: 15px; /* Réduit l'espace entre les images */
+    }
+
+    .image-link {
+        width: 100%; /* Les images prennent toute la largeur disponible */
+        height: auto; /* Ajuste la hauteur en fonction de la largeur */
+        max-width: 400px; /* Limite la taille maximale des images */
+        margin: 0 auto; /* Centre les images */
+    }
+
+    .link-text {
+        font-size: 2rem; /* Réduit la taille du texte dans les images */
+        padding: 5px; /* Diminue l'espace autour du texte */
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.9rem; /* Réduit la taille du texte */
+    }
+
+    footer a {
+        font-size: 1rem; /* Ajuste les liens dans le footer */
+    }
+}
