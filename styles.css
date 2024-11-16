@@ -15,7 +15,7 @@
     font-style: normal;
 }
 
-@keyframes wave {
+@keyframes wave_2 {
     0% {
         transform: scale(1);
         opacity: 0.8;
@@ -30,20 +30,6 @@
     }
 }
 
-@keyframes wave_2 {
-    0% {
-        transform: scale(1);
-        border-radius: 0%; /* Forme initiale (carrée ou rectangulaire) */
-    }
-    50% {
-        transform: scale(1.05); /* Légèrement agrandie */
-        border-radius: 20%; /* Image plus ronde (cercle) */
-    }
-    100% {
-        transform: scale(1);
-        border-radius: 0%; /* Retour à la forme initiale */
-    }
-}
 
 
 
@@ -129,6 +115,9 @@ h3 {
     text-decoration: none;
     flex-shrink: 0; /* Empêche les éléments de se rétrécir dans le flex */
 }
+
+
+
 
 /*
 .image-link:hover {
