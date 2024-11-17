@@ -163,50 +163,51 @@ footer a {
     text-decoration: none;
 }
 
-
 @media (max-width: 768px) {
     body {
-        padding: 10px; /* Ajoute un léger padding pour éviter que le contenu touche les bords */
+        padding: 10px;
     }
 
     header {
-        flex-direction: column; /* Empile le logo et le menu */
-        align-items: flex-start; /* Aligne les éléments sur la gauche */
+        flex-direction: column;
+        align-items: flex-start;
         padding: 10px;
     }
 
     .logo {
-        font-size: 1.5rem; /* Réduit la taille du logo */
+        font-size: 1.5rem;
     }
 
     h1, h2, h3 {
-        font-size: 1.2rem; /* Réduit la taille des titres */
-        line-height: 1.2; /* Augmente légèrement l'espacement pour éviter les superpositions */
+        font-size: 1.2rem;
+        line-height: 1.2;
     }
 
     .image-links {
-        flex-direction: column; /* Passe les images en colonne */
-        gap: 15px; /* Réduit l'espace entre les images */
+        flex-direction: column;
+        gap: 15px;
     }
 
     .image-link {
-        width: 100%; /* Les images prennent toute la largeur disponible */
-        height: auto; /* Ajuste la hauteur en fonction de la largeur */
+        width: 100%; /* Assure que les images s'adaptent à la largeur du conteneur */
         max-width: 400px; /* Limite la taille maximale des images */
+        height: auto; /* Maintient les proportions des images */
         margin: 0 auto; /* Centre les images */
+        background-size: cover; /* S'assure que l'image couvre bien le conteneur */
+        background-position: center; /* Centre l'image dans son conteneur */
     }
 
     .link-text {
-        font-size: 2rem; /* Réduit la taille du texte dans les images */
-        padding: 5px; /* Diminue l'espace autour du texte */
+        font-size: 2rem;
+        padding: 5px;
     }
 
     footer {
         padding: 10px;
-        font-size: 0.9rem; /* Réduit la taille du texte */
+        font-size: 0.9rem;
     }
 
     footer a {
-        font-size: 1rem; /* Ajuste les liens dans le footer */
+        font-size: 1rem;
     }
 }
