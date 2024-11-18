@@ -1,8 +1,24 @@
 /* Styles généraux */
+
+
+@font-face {
+    font-family: 'Fibel'; /* Nom de la police */
+    src: url('fonts/fibel.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fibel_2'; /* Nom de la police */
+    src: url('fonts/Fibel_2.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: #121212;
     color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    font-family: 'Fibel';
     margin: 0;
     padding: 0;
 }
@@ -50,69 +66,89 @@ footer a {
     text-decoration: none;
 }
 
-/* Section projets d'ingénieur */
 .project-section {
-    padding: 60px 40px;
-    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.project-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #f0f0f0;
-}
-
-/* Mise en page des projets en mode ligne */
 .project {
     display: flex;
-    align-items: center;
-    background-color: #333;
-    padding: 20px;
-    margin: 20px 0;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.project:hover {
-    transform: scale(1.02);
+    padding: 10px;
+    background-color: #1e1e1e;
 }
 
 .project-preview {
-    flex: 0 0 30%; /* Réduit la largeur et augmente la hauteur */
-    height: 300px; /* Augmente la hauteur */
-    margin-right: 20px;
-}
+    flex: 1;
+    max-width: 40%; /* Sur PC, la prévisualisation occupe la moitié */
 
-.project-preview iframe {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
 }
 
 .project-info {
     flex: 1;
+    max-width: 60%; /* Sur PC, le texte occupe l'autre moitié */
 }
 
 .project-info h3 {
+    margin: 10px 0;
     font-size: 1.5rem;
-    color: #ff6f61;
-    margin-bottom: 10px;
+    color: #f0f0f0;
 }
 
 .project-info p {
+    margin: 10px 0;
     font-size: 1rem;
-    color: #f0f0f0;
-    margin-bottom: 15px;
+    color: #ccc;
 }
 
 .project-link {
     color: #ff6f61;
-    font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-weight: bold;
 }
 
-.project-link:hover {
-    color: #f0f0f0;
+/* Styles pour mobile */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Empile les éléments verticalement */
+        gap: 10px;
+    }
+
+    .project-preview {
+        max-width: 50%; /* Les iframes prennent toute la largeur */
+        height: auto; /* Ajuste automatiquement la hauteur */
+    }
+
+    .project-info {
+        max-width: 100%; /* Le texte prend toute la largeur */
+    }
+
+    .project-info h3 {
+        font-size: 1.2rem; /* Réduit la taille des titres sur mobile */
+    }
+
+    .project-info p {
+        font-size: 1rem; /* Réduit légèrement la taille du texte descriptif */
+    }
+
+    iframe {
+        width: 50%; /* Les PDF s'ajustent à la largeur de l'écran */
+        height: 300px; /* Augmente la hauteur pour une meilleure lecture sur mobile */
+    }
+}
+
+
+@media (max-width: 850px) {
+    .project-preview {
+        max-width: 100%; /* Sur mobile, la prévisualisation prend toute la largeur */
+    }
+    .project-info {
+        max-width: 100%; /* Sur mobile, le texte prend toute la largeur */
+    }
 }

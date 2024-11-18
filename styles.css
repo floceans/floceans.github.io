@@ -163,7 +163,7 @@ footer a {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     body {
         padding: 10px;
     }
@@ -178,23 +178,42 @@ footer a {
         font-size: 1.5rem;
     }
 
-    h1, h2, h3 {
-        font-size: 1.2rem;
+    h1, h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 3rem;
         line-height: 1.2;
     }
 
     .image-links {
-        flex-direction: column;
-        gap: 15px;
+        display: flex; /* Aligne les images horizontalement */
+        flex-direction: row; /* S'assure que la direction est bien horizontale */
+        gap: 20px; /* Ajoute un espace entre les images */
+        flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+        justify-content: center; /* Centre les images horizontalement dans le conteneur */
+        margin: 20px auto; /* Ajoute un espacement vertical et centre le conteneur */
+        max-width: 90%; /* Limite la largeur pour éviter un débordement */
+        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
     }
-
+    
     .image-link {
-        width: 100%; /* Assure que les images s'adaptent à la largeur du conteneur */
-        max-width: 400px; /* Limite la taille maximale des images */
-        height: auto; /* Maintient les proportions des images */
-        margin: 0 auto; /* Centre les images */
-        background-size: cover; /* S'assure que l'image couvre bien le conteneur */
-        background-position: center; /* Centre l'image dans son conteneur */
+        position: relative;
+        width: 300px; /* Ajustement de largeur pour une meilleure mise en page */
+        height: 250px; /* Ajustement de hauteur */
+        background-size: cover; /* Ajuste l'image pour remplir complètement l'espace */
+        background-position: center; /* Centre l'image dans le conteneur */
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        align-items: center; /* Centre verticalement le texte */
+        justify-content: center; /* Centre horizontalement le texte */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        text-decoration: none;
+        flex-shrink: 0; /* Empêche les éléments de se rétrécir dans le flex */
     }
 
     .link-text {
