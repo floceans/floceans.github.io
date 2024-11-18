@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'Fibel'; /* Nom de la police */
-    src: url('fonts/fibel.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    src: url('fonts/fibel_2.ttf') format('truetype'); /* Chemin vers le fichier de police */
     font-weight: normal;
     font-style: normal;
 }
@@ -82,12 +82,17 @@ footer a {
     border-radius: 8px;
     padding: 10px;
     background-color: #1e1e1e;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Grossit légèrement */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Ajoute une ombre plus marquée */
 }
 
 .project-preview {
     flex: 1;
     max-width: 40%; /* Sur PC, la prévisualisation occupe la moitié */
-
 }
 
 .project-info {
@@ -138,8 +143,8 @@ footer a {
     }
 
     iframe {
-        width: 50%; /* Les PDF s'ajustent à la largeur de l'écran */
-        height: 300px; /* Augmente la hauteur pour une meilleure lecture sur mobile */
+        width: 100%; /* Les PDF s'ajustent à la largeur de l'écran */
+        height: 200px; /* Augmente la hauteur pour une meilleure lecture sur mobile */
     }
 }
 
