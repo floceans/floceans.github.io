@@ -18,7 +18,7 @@
 body {
     background-color: #121212;
     color: #f0f0f0;
-    font-family: 'Fibel';
+    font-family: 'fibel';
     margin: 0;
     padding: 0;
 }
@@ -27,6 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'fibel_2';
     padding: 20px;
     background-color: #1e1e1e;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -55,6 +56,7 @@ nav ul {
     color: #ff6f61;
 }
 
+
 footer {
     text-align: center;
     padding: 20px;
@@ -68,10 +70,41 @@ footer a {
     text-decoration: none;
 }
 
+.page-header {
+    text-align: center;
+    margin: 30px 0;
+    color: #f0f0f0;
+    margin: 1px;
+}
+
+.page-header h1 {
+    font-size: 6rem; /* Titre principal plus grand */
+    margin-bottom: 1px;
+    margin-top: 2px;
+    font-family: 'fibel';
+    color: #ff6f61; /* Couleur distinctive pour le titre */
+}
+
+.page-header h2 {
+    font-size: 1.5rem; /* Sous-titre plus petit */
+    font-weight: bold;
+    font-family: 'fibel_2';
+    color: #ccc; /* Couleur plus douce pour le sous-titre */
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
 .project-section {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.project-section h2 {
+    font-size: 3rem;
+    font-family: 'fibel';
+    color: #ff6f61;
+    margin-bottom: 20px;
 }
 
 .project {
@@ -88,7 +121,7 @@ footer a {
 }
 
 .project:hover {
-    transform: scale(1.05); /* Grossit légèrement */
+    transform: scale(1.03); /* Grossit légèrement */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Ajoute une ombre plus marquée */
 }
 
@@ -105,34 +138,42 @@ footer a {
 .project-info h3 {
     margin: 10px 0;
     font-size: 1.5rem;
-    font-family: 'Fibel';
+    font-family: 'fibel_2';
     color: #f0f0f0;
 }
 
 .project-info p {
     margin: 10px 0;
     font-size: 1rem;
-    font-family: 'Fibel';
+    font-family: 'fibel_2';
     color: #ccc;
 }
 
-.project-info p2 {
+.project-info h4 {
     margin: 10px 0;
     font-size: 1rem;
     font-weight: bold;
-    font-family: 'Fibel';
-    color: #ff6f61;
+    font-family: 'fibel_2';
+    color: #9d93ff;
 }
 
 .project-link {
     color: #ff6f61;
     text-decoration: none;
-    font-family: 'Fibel';
+    font-family: 'fibel_2';
     font-weight: bold;
 }
 
 /* Styles pour mobile */
 @media (max-width: 768px) {
+
+    .page-header h1 {
+        font-size: 2rem; /* Réduit la taille du titre sur téléphone */
+    }
+    .page-header h2 {
+        font-size: 1rem; /* Réduit la taille du sous-titre sur téléphone */
+    }
+
     .project {
         flex-direction: column; /* Empile les éléments verticalement */
         gap: 10px;
@@ -159,14 +200,11 @@ footer a {
         width: 100%; /* Les PDF s'ajustent à la largeur de l'écran */
         height: 200px; /* Augmente la hauteur pour une meilleure lecture sur mobile */
     }
-}
-
-
-@media (max-width: 850px) {
-    .project-preview {
-        max-width: 100%; /* Sur mobile, la prévisualisation prend toute la largeur */
-    }
-    .project-info {
-        max-width: 100%; /* Sur mobile, le texte prend toute la largeur */
+    .project-preview iframe {
+        transform: scale(0.8); /* Réduit l'échelle du contenu à 80% */
+        transform-origin: top left; /* Gère l'origine du zoom pour bien aligner */
+        width: 125%; /* Ajuste la largeur pour compenser le scale */
+        height: 250px; /* Assure une hauteur adaptée */
     }
 }
+
