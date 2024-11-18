@@ -2,14 +2,14 @@
 
 
 @font-face {
-    font-family: 'Fibel'; /* Nom de la police */
-    src: url('fonts/fibel_2.ttf') format('truetype'); /* Chemin vers le fichier de police */
+    font-family: 'fibel'; /* Nom de la police */
+    src: url('fonts/fibel.ttf') format('truetype'); /* Chemin vers le fichier de police */
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Fibel_2'; /* Nom de la police */
+    font-family: 'fibel_2'; /* Nom de la police */
     src: url('fonts/Fibel_2.ttf') format('truetype'); /* Chemin vers le fichier de police */
     font-weight: normal;
     font-style: normal;
@@ -35,6 +35,7 @@ header {
 header .logo {
     font-size: 1.5rem;
     color: #ff6f61;
+    font-family: 'fibel_2';
     font-weight: bold;
 }
 
@@ -58,6 +59,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #1e1e1e;
+    font-family: 'Courier New', Courier, monospace;
     color: #f0f0f0;
 }
 
@@ -103,18 +105,29 @@ footer a {
 .project-info h3 {
     margin: 10px 0;
     font-size: 1.5rem;
+    font-family: 'Fibel';
     color: #f0f0f0;
 }
 
 .project-info p {
     margin: 10px 0;
     font-size: 1rem;
+    font-family: 'Fibel';
     color: #ccc;
+}
+
+.project-info p2 {
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Fibel';
+    color: #ff6f61;
 }
 
 .project-link {
     color: #ff6f61;
     text-decoration: none;
+    font-family: 'Fibel';
     font-weight: bold;
 }
 
