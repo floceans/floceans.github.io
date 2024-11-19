@@ -16,6 +16,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Minecraft';
+    src: /*url('fonts/minecraft.ttf') format('truetype'),*/
+        url('fonts/minecraft.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 @keyframes wave_2 {
     0% {
         transform: scale(1);
@@ -157,7 +166,7 @@ h3 {
 }
 
 footer {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Minecraft';
     text-align: center;
     padding: 20px;
     background-color: #1e1e1e;
@@ -165,7 +174,7 @@ footer {
 }
 
 footer a {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Minecraft';
     color: #ff6f61;
     text-decoration: none;
 }
