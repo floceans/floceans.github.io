@@ -109,7 +109,8 @@ footer a {
 
 .page-header p {
     font-size: 0.7rem;
-    font-family: 'helvetica neue';
+    font-family: 'Inter';
+    font-weight: bold;
     color: #ccc;
     margin: 0;
 }
@@ -242,9 +243,8 @@ footer a {
 
     /* Iframes */
     iframe {
-        width:250%; /* Prend toute la largeur de l'écran */
+        width: 250%; /* Prend toute la largeur de l'écran */
         height: auto; /* Ajuste automatiquement la hauteur */
         border: none; /* Retire les bordures */
     }
 }
-
