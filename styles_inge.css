@@ -185,12 +185,12 @@ footer a {
 @media (max-width: 768px) {
 
     /* Header */
-    .page-header .logo {
-        font-size: 0.7rem; /* Réduit la taille du logo */
+    header .logo {
+        font-size: 0.6rem; /* Réduit la taille du logo */
     }
 
     .nav-link {
-        font-size: 0.7rem; /* Réduit la taille des liens */
+        font-size: 0.6rem; /* Réduit la taille des liens */
     }
 
     .page-header {
