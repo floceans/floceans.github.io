@@ -196,7 +196,7 @@ footer a {
 
 @media (max-width: 850px) {
     body {
-        padding: 10px;
+        padding: 5px;
     }
 
     header {
@@ -216,6 +216,7 @@ footer a {
     }
 
     h2 {
+        align-self: center;
         font-size: 2rem;
         line-height: 1.2;
     }
