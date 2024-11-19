@@ -1,4 +1,5 @@
 /* Style général */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 
 @font-face {
@@ -14,9 +15,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
 
 @keyframes wave_2 {
     0% {
@@ -75,14 +73,13 @@ h1 {
 }
 
 h2 {
-    color: #f0f0f0;
     font-family: 'Inter'; /* Police Inter */
     -webkit-text-fill-color: transparent; /* Remplissage transparent */
     -webkit-text-stroke-color: #f0f0f0; /* Couleur de la bordure */
-    -webkit-text-stroke-width: 2px; /* Épaisseur des lettres creuses */
-    font-size: 4rem;
-    margin-bottom: 0.5rem; /* Réduit l'espace en dessous */
-    line-height:0.5; /* Ajuste l'espacement entre les lignes */
+    -webkit-text-stroke-width: 1px; /* Épaisseur des lettres creuses */
+    letter-spacing: 2px; /* Espacement des lettres */
+    font-size: calc(1.525rem + 3.3vw); /* Taille dynamique */
+    margin-bottom: 1px; /* Espacement réduit sous le titre */
 }
 
 h3 {
@@ -142,11 +139,15 @@ h3 {
 }
 
 .link-text {
+    font-family: 'Inter'; /* Police Inter */
+    -webkit-text-fill-color: transparent; /* Remplissage transparent */
+    -webkit-text-stroke-color: #f0f0f0; /* Couleur de la bordure */
+    -webkit-text-stroke-width: 1px; /* Épaisseur des lettres creuses */
+    letter-spacing: 1px; /* Espacement des lettres */
+    font-size: calc(1.525rem + 3.3vw); /* Taille dynamique */
+    margin-bottom: 1px; /* Espacement réduit sous le titre */
     position: absolute;
-    color: #ffffff;
-    font-family: 'Fibel';
     font-size: 4rem;
-    font-weight: bold;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 100%;
