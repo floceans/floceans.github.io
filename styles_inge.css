@@ -184,44 +184,67 @@ footer a {
 /* Styles pour mobile */
 @media (max-width: 768px) {
 
-    .page-header h1 {
-        font-size: 2rem; /* Réduit la taille du titre sur téléphone */
-    }
-    .page-header h2 {
-        font-size: 1rem; /* Réduit la taille du sous-titre sur téléphone */
+    /* Header */
+    .page-header .logo {
+        font-size: 0.7rem; /* Réduit la taille du logo */
     }
 
+    .nav-link {
+        font-size: 0.7rem; /* Réduit la taille des liens */
+    }
+
+    .page-header {
+        font-size: 0.9rem; /* Réduit globalement la taille de la section */
+        text-align: center; /* Centre les éléments dans le header */
+    }
+    .page-header h1 {
+        font-size: 2.5rem; /* Taille réduite du titre */
+        margin: 0.5rem 0; /* Espacement réduit autour du titre */
+    }
+    .page-header h2 {
+        font-size: 1rem; /* Taille réduite du sous-titre */
+        margin: 0.3rem 0; /* Moins d'espace entre les lignes */
+    }
+    .page-header p {
+        font-size: 0.9rem; /* Réduit la taille du texte */
+        word-wrap: break-word; /* Empêche les débordements de texte */
+    }
+
+    /* Projet */
     .project {
         flex-direction: column; /* Empile les éléments verticalement */
-        gap: 10px;
+        gap: 10px; /* Ajoute un espacement uniforme */
+    }
+
+    .project-section h2 {
+        font-size: 2rem; /* Réduit la taille du titre */
     }
 
     .project-preview {
-        max-width: 50%; /* Les iframes prennent toute la largeur */
+        width: 100%; /* Les iframes prennent toute la largeur */
         height: auto; /* Ajuste automatiquement la hauteur */
     }
 
     .project-info {
         max-width: 100%; /* Le texte prend toute la largeur */
+        text-align: center; /* Centre le texte pour plus de lisibilité */
     }
-
     .project-info h3 {
-        font-size: 1.2rem; /* Réduit la taille des titres sur mobile */
+        font-size: 1.2rem; /* Réduit la taille des titres */
     }
-
     .project-info p {
-        font-size: 1rem; /* Réduit légèrement la taille du texte descriptif */
+        font-size: 1rem; /* Taille réduite pour les descriptions */
     }
 
-    iframe {
-        width: 100%; /* Les PDF s'ajustent à la largeur de l'écran */
-        height: 200px; /* Augmente la hauteur pour une meilleure lecture sur mobile */
+    .project-link {
+        font-size: 1rem; /* Réduit la taille des liens */
     }
-    .project-preview iframe {
-        transform: scale(0.8); /* Réduit l'échelle du contenu à 80% */
-        transform-origin: top left; /* Gère l'origine du zoom pour bien aligner */
-        width: 125%; /* Ajuste la largeur pour compenser le scale */
-        height: 250px; /* Assure une hauteur adaptée */
+
+    /* Iframes */
+    iframe {
+        width:250%; /* Prend toute la largeur de l'écran */
+        height: auto; /* Ajuste automatiquement la hauteur */
+        border: none; /* Retire les bordures */
     }
 }
 
