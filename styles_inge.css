@@ -243,8 +243,9 @@ footer a {
 
     /* Iframes */
     iframe {
-        width: 250%; /* Ajuste la largeur au conteneur parent */
-        height: 40vh; /* Utilise toute la hauteur visible de la fenêtre */
-        border: none;
+        display: none; /* Cache les iframes par défaut */
+        /*width: 250%; /* Ajuste la largeur au conteneur parent */
+        /*height: 40vh; /* Utilise toute la hauteur visible de la fenêtre */
+        /*border: none;*/
     }
 }
