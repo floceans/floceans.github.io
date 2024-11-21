@@ -99,7 +99,7 @@ footer a {
 }
 
 .page-header h2 {
-    font-family: 'Inter';
+    font-family: 'Fibel_2'; /* Police Fibel */
     font-size: 1.5rem; /* Sous-titre plus petit */
     font-weight: bold;
     color: #9d93ff;; /* Couleur plus douce pour le sous-titre */
@@ -207,7 +207,7 @@ footer a {
         margin: 0.3rem 0; /* Moins d'espace entre les lignes */
     }
     .page-header p {
-        font-size: 0.9rem; /* Réduit la taille du texte */
+        font-size: 0.4rem; /* Réduit la taille du texte */
         word-wrap: break-word; /* Empêche les débordements de texte */
     }
 
@@ -243,8 +243,8 @@ footer a {
 
     /* Iframes */
     iframe {
-        width: 250%; /* Prend toute la largeur de l'écran */
-        height: auto; /* Ajuste automatiquement la hauteur */
-        border: none; /* Retire les bordures */
+        width: 250%; /* Ajuste la largeur au conteneur parent */
+        height: 40vh; /* Utilise toute la hauteur visible de la fenêtre */
+        border: none;
     }
 }
