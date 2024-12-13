@@ -43,7 +43,7 @@ header {
 
 header .logo {
     font-family: 'Minecraft', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ff6f61;
     font-weight: bold;
 }
@@ -55,7 +55,7 @@ nav ul {
 }
 
 .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Minecraft', sans-serif;
     color: #f0f0f0;
     text-decoration: none;
@@ -203,5 +203,23 @@ h5 {
     .page-header p {
         font-size: 0.9rem; /* Réduit la taille du texte */
         word-wrap: break-word; /* Empêche les débordements de texte */
+    }
+
+    .project-photos {
+        flex-direction: column; /* Les photos sont empilées */
+        align-items: center;   /* Centrer les images */
+    }
+
+    .project-photos img {
+        display: none; /* Masquer toutes les images */
+    }
+
+    /* Affiche seulement la première image avec un style spécifique */
+    .project-photos img:first-child {
+        display: block; /* Afficher la première image */
+        width: 90%; /* Ajuste la largeur pour les mobiles */
+        max-width: 400px; /* Taille maximale pour éviter une image trop grande */
+        border-radius: 20px; /* Bords arrondis */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
     }
 }
