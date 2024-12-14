@@ -183,15 +183,37 @@ h3 {
 footer {
     font-family: 'Minecraft';
     text-align: center;
-    padding: 20px;
+    padding: 0.5px;
     background-color: #1e1e1e;
     color: #f0f0f0;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    text-align: center;
+}
+.contact-column {
+    flex: 1;
+    text-align: left;
+}
+.contact-column p {
+    margin-bottom: 0px; /* Espacement réduit à 2 pixels entre chaque ligne */
+    margin-top: 0px;
 }
 
 footer a {
     font-family: 'Minecraft';
     color: #ff6f61;
     text-decoration: none;
+}
+
+footer p {
+    margin-bottom: -5px; /* Espacement réduit à 2 pixels entre chaque ligne */
+    font-size: 14px; /* Ajuste la taille de la police si nécessaire */
 }
 
 @media (max-width: 850px) {
