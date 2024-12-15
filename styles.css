@@ -97,10 +97,10 @@ h1 {
 }
 
 h2 {
-    font-family: 'Inter'; /* Police Inter */
-    -webkit-text-fill-color: transparent; /* Remplissage transparent */
-    -webkit-text-stroke-color: #f0f0f0; /* Couleur de la bordure */
-    -webkit-text-stroke-width: 1px; /* Épaisseur des lettres creuses */
+    font-family: 'Fibel_2'; /* Police Inter */
+    /*-webkit-text-fill-color: transparent;  Remplissage transparent */
+    /*-webkit-text-stroke-color: #f0f0f0; Couleur de la bordure */
+    /*-webkit-text-stroke-width: 1px; /* Épaisseur des lettres creuses */
     letter-spacing: 2px; /* Espacement des lettres */
     font-size: calc(1.525rem + 3.3vw); /* Taille dynamique */
     margin-bottom: 1px; /* Espacement réduit sous le titre */
@@ -181,29 +181,35 @@ h3 {
 }
 
 footer {
-    font-family: 'Minecraft';
     text-align: center;
-    padding: 0.5px;
-    background-color: #1e1e1e;
-    color: #f0f0f0;
+    background-color: #1e1e1e; /* Optionnel : pour différencier le footer */
+    font-family: 'Minecraft';
+    padding: 1px 0;
 }
 
 .contact-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    text-align: center;
+    justify-content: center; /* Centre les colonnes horizontalement */
+    gap: 40px; /* Espacement entre les colonnes */
 }
+
 .contact-column {
-    flex: 1;
-    text-align: left;
+    text-align: left; /* Pour garder le texte aligné à gauche dans les colonnes */
 }
+
 .contact-column p {
-    margin-bottom: 0px; /* Espacement réduit à 2 pixels entre chaque ligne */
-    margin-top: 0px;
+    margin: 10px 0; /* Espacement entre les éléments */
 }
+
+.contact-column a {
+    text-decoration: none;
+    color: #ff6f61; /* Couleur des liens */
+}
+
+.contact-column a:hover {
+    color: #007BFF; /* Couleur au survol */
+}
+
 
 footer a {
     font-family: 'Minecraft';

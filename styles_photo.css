@@ -66,18 +66,46 @@ nav ul {
     color: #ff6f61;
 }
 
-
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #1e1e1e;
-    font-family: 'Minecraft', sans-serif;
-    color: #f0f0f0;
+    background-color: #1e1e1e; /* Optionnel : pour différencier le footer */
+    font-family: 'Minecraft';
+    padding: 1px 0;
 }
 
+.contact-container {
+    display: flex;
+    justify-content: center; /* Centre les colonnes horizontalement */
+    gap: 40px; /* Espacement entre les colonnes */
+}
+
+.contact-column {
+    text-align: left; /* Pour garder le texte aligné à gauche dans les colonnes */
+}
+
+.contact-column p {
+    margin: 10px 0; /* Espacement entre les éléments */
+}
+
+.contact-column a {
+    text-decoration: none;
+    color: #ff6f61; /* Couleur des liens */
+}
+
+.contact-column a:hover {
+    color: #007BFF; /* Couleur au survol */
+}
+
+
 footer a {
+    font-family: 'Minecraft';
     color: #ff6f61;
     text-decoration: none;
+}
+
+footer p {
+    margin-bottom: -5px; /* Espacement réduit à 2 pixels entre chaque ligne */
+    font-size: 14px; /* Ajuste la taille de la police si nécessaire */
 }
 
 .page-header {
