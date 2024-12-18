@@ -277,4 +277,9 @@ footer p {
         /*height: 40vh; /* Utilise toute la hauteur visible de la fenêtre */
         /*border: none;*/
     }
+
+    footer p {
+        font-size: 0.6rem;
+    }
+    
 }

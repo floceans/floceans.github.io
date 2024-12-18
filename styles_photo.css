@@ -250,4 +250,8 @@ h5 {
         border-radius: 20px; /* Bords arrondis */
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
     }
+
+    footer p {
+        font-size: 0.6rem;
+    }
 }
