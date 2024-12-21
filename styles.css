@@ -88,30 +88,46 @@ header {
     margin-top: 50px;
 }
 
-h1 {
-    color: #f0f0f0;
-    font-family: 'Fibel_2';
-    font-size: 2rem;
-    margin-bottom: 0.5rem; /* Réduit l'espace en dessous */
-    line-height: 0.1; /* Ajuste l'espacement entre les lignes */
+.main-title .name-highlight {
+    color: #ffffff;
+    font-style: italic;
 }
 
-h2 {
-    font-family: 'Fibel_2'; /* Police Inter */
-    /*-webkit-text-fill-color: transparent;  Remplissage transparent */
-    /*-webkit-text-stroke-color: #f0f0f0; Couleur de la bordure */
-    /*-webkit-text-stroke-width: 1px; /* Épaisseur des lettres creuses */
-    letter-spacing: 2px; /* Espacement des lettres */
-    font-size: calc(1.525rem + 3.3vw); /* Taille dynamique */
-    margin-bottom: 1px; /* Espacement réduit sous le titre */
+/* Sous-titre (h3) */
+.subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #555;
+    margin: 0rem 0 1.5rem;
+    font-weight: normal;
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h3 {
-    color: #f0f0f0;
-    font-family: 'Fibel_2';
-    font-size: 2rem;
-    margin-bottom: 0.5rem; /* Réduit l'espace en dessous */
-    line-height: 0.1; /* Ajuste l'espacement entre les lignes */
+/* Titre de section (h2) */
+.section-title {
+    font-size: 3rem;
+    text-align: center;
+    color: #ff6f61;
+    margin: 0rem 0 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.construction-note {
+    display: inline-block;
+    padding: 1rem;
+    margin: 0rem auto;
+    font-size: 1rem;
+    font-style: italic;
+    background-color: #fffbccc3;
+    color: #333;
+    border: 2px solid #ff6f61;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Styles pour les liens images */
