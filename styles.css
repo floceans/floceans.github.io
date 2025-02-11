@@ -46,7 +46,7 @@
         opacity: 1;
     }
     50% {
-        transform: scale(0.9);
+        transform: scale(0.97);
         opacity: 0.8;
     }
     100% {
@@ -59,7 +59,7 @@
 
 
 body {
-    background-color: #121212;
+    background-color: #000000;
     color: #f0f0f0;
     font-family: 'Fibel_2';
     margin: 0;
@@ -97,10 +97,9 @@ header {
 .subtitle {
     font-size: 1.5rem;
     text-align: center;
-    color: #555;
+    color: #d66464;
     margin: 0rem 0 1.5rem;
     font-weight: normal;
-    font-style: italic;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -130,44 +129,32 @@ header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles pour les liens images */
 .image-links {
-    display: flex; /* Aligne les images horizontalement */
-    flex-direction: row; /* S'assure que la direction est bien horizontale */
-    gap: 20px; /* Ajoute un espace entre les images */
-    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre les images horizontalement dans le conteneur */
-    margin: 20px auto; /* Ajoute un espacement vertical et centre le conteneur */
-    max-width: 90%; /* Limite la largeur pour éviter un débordement */
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    width: 50vw; 
+    height: 165vh;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    box-sizing: content-box;
 }
 
 .image-link {
-    position: relative;
-    width: 550px; /* Ajustement de largeur pour une meilleure mise en page */
-    height: 500px; /* Ajustement de hauteur */
-    background-size: cover; /* Ajuste l'image pour remplir complètement l'espace */
-    background-position: center; /* Centre l'image dans le conteneur */
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    align-items: center; /* Centre verticalement le texte */
-    justify-content: center; /* Centre horizontalement le texte */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    text-decoration: none;
-    flex-shrink: 0; /* Empêche les éléments de se rétrécir dans le flex */
+    width: 50vw; 
+    height: 165vh;
+    background-size: contain; /* Assure que l'image reste entière */
+    background-position: center; /* Centre l'image dans son cadre */
+    background-repeat: no-repeat; /* Empêche la répétition */
+    position: absolute;
+}
+
+.image-link:nth-child(1) {
+    left: 0; /* Place la première image dans le premier tiers */
+}
+
+.image-link:nth-child(2) {
+    right: 0; /* Place la deuxième image dans le second tiers */
 }
 
 
-
-
-/*
-.image-link:hover {
-    transform: scale(1.05); /* Effet de zoom 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
-}
-*/
 .nav-link {
     transition: all 0.3s ease;
     display: inline-block;
@@ -177,30 +164,32 @@ header {
     animation: push 0.5s;/*wave_2 0.8s infinite;*/
     color: #ff6f61; /* Couleur du texte pendant le survol */
 }
-
+/*
 .link-text {
-    font-family: 'Inter'; /* Police Inter */
-    -webkit-text-fill-color: transparent; /* Remplissage transparent */
-    -webkit-text-stroke-color: #f0f0f0; /* Couleur de la bordure */
-    -webkit-text-stroke-width: 1px; /* Épaisseur des lettres creuses */
-    letter-spacing: 1px; /* Espacement des lettres */
-    font-size: calc(1.525rem + 3.3vw); /* Taille dynamique */
-    margin-bottom: 1px; /* Espacement réduit sous le titre */
+    font-family: 'Inter'; 
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-color: #f0f0f0; 
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: 1px; 
+    font-size: calc(1.525rem + 3.3vw);
+    margin-bottom: 1px;
     position: absolute;
     font-size: 4rem;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 100%;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.5); /* Légère transparence pour meilleure lisibilité */
+    background: rgba(0, 0, 0, 0.5); 
     border-radius: 8px;
 }
+*/
 
 footer {
     text-align: center;
     background-color: #1e1e1e; /* Optionnel : pour différencier le footer */
     font-family: 'Minecraft';
     padding: 1px 0;
+    margin-top: -15vh;
 }
 
 .contact-container {
@@ -239,6 +228,30 @@ footer p {
 }
 
 @media (max-width: 850px) {
+
+    .image-links {
+        flex-direction: column; /* Les images passent en colonne */
+    }
+
+    .image-link {
+        width: 100vw; /* Chaque image prend toute la largeur */
+        height: 50dvh; /* Chaque image prend la moitié de la hauteur */
+    }
+
+    /* Ordre des images */
+    .image-link:nth-child(2) {
+        order: 2; /* Place photo_1 en bas */
+        top: 10;
+        transform: rotate(-90deg);
+    }
+
+    .image-link:nth-child(1) {
+        order: 1; /* Place photo_2 en haut */
+        bottom: 0;
+        transform: rotate(-90deg);
+    }
+
+
     body {
         padding: 5px;
     }
@@ -267,33 +280,7 @@ footer p {
         line-height: 1.2;
     }
 
-    .image-links {
-        display: flex; /* Aligne les images horizontalement */
-        flex-direction: row; /* S'assure que la direction est bien horizontale */
-        gap: 20px; /* Ajoute un espace entre les images */
-        flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
-        justify-content: center; /* Centre les images horizontalement dans le conteneur */
-        margin: 20px auto; /* Ajoute un espacement vertical et centre le conteneur */
-        max-width: 90%; /* Limite la largeur pour éviter un débordement */
-        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-    }
-    
-    .image-link {
-        position: relative;
-        width: 300px; /* Ajustement de largeur pour une meilleure mise en page */
-        height: 250px; /* Ajustement de hauteur */
-        background-size: cover; /* Ajuste l'image pour remplir complètement l'espace */
-        background-position: center; /* Centre l'image dans le conteneur */
-        border-radius: 8px;
-        overflow: hidden;
-        display: flex;
-        align-items: center; /* Centre verticalement le texte */
-        justify-content: center; /* Centre horizontalement le texte */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        text-decoration: none;
-        flex-shrink: 0; /* Empêche les éléments de se rétrécir dans le flex */
-    }
+
 
     .link-text {
         font-size: 2rem;
