@@ -233,25 +233,7 @@ footer p {
 
 @media (max-width: 850px) {
 
-    /*.image-links {
-        flex-direction: column; /* Les images passent en colonne 
-    }
- .image-link {
-        width: 100vw;
-        height: 50dvh; 
-    }
 
-    .image-link:nth-child(2) {
-        order: 2; 
-        top: 10;
-        transform: rotate(-90deg);
-    }
-
-    .image-link:nth-child(1) {
-        order: 1; 
-        bottom: 0;
-        transform: rotate(-90deg);
-    }*/
     .image-links {
         width: 100vw;
         height: 100vh;
@@ -259,25 +241,26 @@ footer p {
         flex-direction: column;
         justify-content: space-between;
         position: absolute;
-        top: 0;
-        left: 0;
     }
 
     .image-link {
         width: 100vw;
-        height: 50vh; /* Chaque image prend la moitié de l'écran */
+        height: 50%; /* Chaque image prend la moitié de l'écran */
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100vh - 20vh);
     }
 
     .image-link:nth-child(1) {
         align-self: flex-start;
-        top: 0;
-        margin-top: 10;
+        transform: rotate(90deg);
+        left : 0;
     }
 
     .image-link:nth-child(2) {
         align-self: flex-end;
-        bottom: 0;
-        margin-bottom: 0;
+        transform: rotate(90deg);
+        right : 0;
     }
 
     body {
@@ -291,7 +274,7 @@ footer p {
     }
 
     .logo {
-        font-size: 1.5rem;
+        font-size: 15rem;
     }
 
     h1, h3 {
@@ -313,6 +296,13 @@ footer p {
     .link-text {
         font-size: 1rem;
         padding: 5px;
+        transform: rotate(-90deg);
+    }
+
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
     }
 
     footer p {
