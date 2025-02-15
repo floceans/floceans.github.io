@@ -131,7 +131,7 @@ header {
 
 .image-links {
     width: 50vw; 
-    height: 165vh;
+    height: 115vh;
     margin-top: 0%;
     margin-bottom: 0%;
     box-sizing: content-box;
@@ -139,7 +139,7 @@ header {
 
 .image-link {
     width: 50vw; 
-    height: 165vh;
+    height: 100vh;
     background-size: contain; /* Assure que l'image reste entière */
     background-position: center; /* Centre l'image dans son cadre */
     background-repeat: no-repeat; /* Empêche la répétition */
@@ -233,34 +233,32 @@ footer p {
 
 @media (max-width: 850px) {
 
-
     .image-links {
         width: 100vw;
-        height: 100vh;
+        height: 115vh; /* Prend toute la hauteur de l'écran */
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        position: absolute;
+        align-items: center;
+        position: relative;
     }
-
+    
     .image-link {
-        width: 100vw;
-        height: 50%; /* Chaque image prend la moitié de l'écran */
-        flex-direction: column;
-        justify-content: space-between;
-        height: calc(100vh - 20vh);
+        width: 100vw; 
+        height: 50vh; /* Chaque image prend la moitié de la hauteur */
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
     }
-
+    
+    /* Première image en haut */
     .image-link:nth-child(1) {
         align-self: flex-start;
-        transform: rotate(90deg);
-        left : 0;
     }
-
+    
+    /* Deuxième image en bas */
     .image-link:nth-child(2) {
         align-self: flex-end;
-        transform: rotate(90deg);
-        right : 0;
     }
 
     body {
@@ -294,9 +292,9 @@ footer p {
 
 
     .link-text {
-        font-size: 1rem;
+        font-size: 2rem;
         padding: 5px;
-        transform: rotate(-90deg);
+        /*transform: rotate(-90deg);*/
     }
 
     footer {
