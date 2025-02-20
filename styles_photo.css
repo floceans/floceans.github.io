@@ -251,7 +251,40 @@ h5 {
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre */
     }
 
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
     footer p {
         font-size: 0.6rem;
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Une seule colonne */
+        gap: 0; /* Supprime tout espace entre les éléments */
+        text-align: center; /* Centre le texte */
+    }
+
+    .contact-column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px; /* Petit espace entre l'icône et le texte */
+    }
+
+    .contact-column p {
+        margin: 1%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        white-space: nowrap; /* Empêche le retour à la ligne */
+    }
+
+    .contact-column i {
+        font-size: 1em; /* Ajuste la taille des icônes si nécessaire */
     }
 }
